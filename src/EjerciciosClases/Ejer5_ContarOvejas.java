@@ -27,11 +27,7 @@ public class Ejer5_ContarOvejas {
 
                 contador = contador + 1;
                 System.out.println("La cantidad de ovejas contadas es de: " + contador);
-        } while (answer.equals("si"));
-        
-        //Terminar en casa, corregir machetazo
-       
-       
+        } while (answer.equals("si"));       
         
     }
 

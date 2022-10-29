@@ -58,6 +58,8 @@ public class Ejer4_UnionNumerosParImpar {
         for (int j = 0; j < diemnsionImpares; j++) {
             System.out.print(impares[j] + " , ");
             
+            //TERMINAR
+            
         }
 
     }
