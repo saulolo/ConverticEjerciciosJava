@@ -35,16 +35,22 @@ public class Ejer5_LiquidacionEmpleado {
         String nombre;
         int mayor = 0;
         int posicion = 0;
+        double liquidacion;
+        
+        String tamanioEmpleados;
+        int tamanoLiquidacio;
         
         
-        int empleados[] = new int[7];
+        String empleados[] = new String[7];
+        double liquidacionEmpledo[] = new double[7];
+        
         
         for (int i = 0; i < 7; i++) {
             
-            
             System.out.println("Ingrese el nombre del empleado # " + (i + 1) + " :");
             nombre = input.next();
-
+            empleados[i] = nombre;
+            
             System.out.println("Ingrese el salario: ");
             salario = input.nextInt();
 
@@ -63,8 +69,25 @@ public class Ejer5_LiquidacionEmpleado {
             vacaciones = (salario * diasLaborados) / 720;
             System.out.println("Vacaciones: " + vacaciones + " $" );
             
+            liquidacion = prima + cesantias + interesesCesantias + vacaciones;
+            
+            System.out.println("La liquidación de " + nombre + " es de " + liquidacion);
+            liquidacionEmpledo[i] = liquidacion;
+            
         }
         
+        for (int i = 0; i < 7; i++) {
+            System.out.print(empleados[i] + " , "); 
+        }
+        
+         for (int i = 0; i < 7; i++) {
+            System.out.print(liquidacionEmpledo[i] + " , "); 
+        }
+        
+         
+         
+         //Metodo burbuja
+         
     }
 
 }
