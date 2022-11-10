@@ -36,16 +36,17 @@ public class Ejer5_LiquidacionEmpleado {
         int mayor = 0;
         int posicion = 0;
         double liquidacion;
+        double auxiliar;
         
         String tamanioEmpleados;
         int tamanoLiquidacio;
         
         
-        String empleados[] = new String[7];
-        double liquidacionEmpledo[] = new double[7];
+        String empleados[] = new String[3];
+        double liquidacionEmpledo[] = new double[3];
         
         
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 3; i++) {
             
             System.out.println("Ingrese el nombre del empleado # " + (i + 1) + " :");
             nombre = input.next();
@@ -72,22 +73,45 @@ public class Ejer5_LiquidacionEmpleado {
             liquidacion = prima + cesantias + interesesCesantias + vacaciones;
             
             System.out.println("La liquidación de " + nombre + " es de " + liquidacion);
-            liquidacionEmpledo[i] = liquidacion;
+            liquidacionEmpledo[i] = liquidacion; 
+        }
+        
+        System.out.println("\nEl arreglo de empleados es: ");
+        for (int i = 0; i < empleados.length; i++) {
+            System.out.println(empleados[i] + " , "); 
+        }
+        
+        System.out.println("=====================");
+        
+        System.out.println("\nEl arreglo de la liquidación es: ");
+         for (int i = 0; i < liquidacionEmpledo.length; i++) {
+            System.out.print(liquidacionEmpledo[i] + " , ");
+        }
+         
+         for (int i = 0; i < liquidacionEmpledo.length - 1; i++) {
+             for (int j = 0; j < liquidacionEmpledo.length - 1; j++) {
+                 if(liquidacionEmpledo[j] > liquidacionEmpledo[j+1]) {
+                     auxiliar = liquidacionEmpledo[j];
+                     liquidacionEmpledo[j] = liquidacionEmpledo[j+1];
+                     liquidacionEmpledo[j+1] = auxiliar;
+                 }
+
+            }
+
+        }
+         System.out.println("\nEl arreglo ordenado de la liquidación es: ");
+             System.out.println(liquidacionEmpledo + "");
             
         }
-        
-        for (int i = 0; i < 7; i++) {
-            System.out.print(empleados[i] + " , "); 
-        }
-        
-         for (int i = 0; i < 7; i++) {
-            System.out.print(liquidacionEmpledo[i] + " , "); 
-        }
-        
-         
+
+    }
+
+
+
+
          
          //Metodo burbuja
          
-    }
+    
 
-}
+
