@@ -130,8 +130,7 @@ public class Ejer1_Traductor {
                 System.out.println("Opção inválida, digite novamente o idioma");
                 break;
                 
-        } 
-        
+        }
     }
     
 }
