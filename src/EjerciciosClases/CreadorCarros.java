@@ -3,7 +3,7 @@ package EjerciciosClases;
 /* @author: Saulolo */
 
 public class CreadorCarros {
-    Carro construirCarro(){
+    public Carro construirCarro(){
         return new Carro();
     }
 
