@@ -47,6 +47,10 @@ public class CineMain {
         
         System.out.println("El valor a pagar es => " + valor + " $.");
         
+
+        
+        
+        
     }
 
 }
