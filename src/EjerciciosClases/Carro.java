@@ -20,6 +20,10 @@ public class Carro {
     public Carro(String color) {
         this.color = color;
     }
+    
+    
+    
+    
 
     public Carro(String color, String marca, int numeroPuertas) {
         this.color = color;
