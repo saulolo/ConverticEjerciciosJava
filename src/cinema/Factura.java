@@ -8,7 +8,7 @@ public class Factura {
     Cine sillasCine;
     Crispetas2 crispetas;
 
-    public Factura(String sillas, String size) {
+    public Factura(String sillas, String size){
         sillasCine = new Cine();
         crispetas = new Crispetas2(size);
         sillasCine.ventaSillas(sillas);

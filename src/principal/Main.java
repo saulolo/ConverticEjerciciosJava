@@ -7,13 +7,14 @@ import cinema.Crispetas2;
 import cinema.Factura;
 
 /* @author: Saulolo */
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         Cine cine = new Cine();
 
-        String sillasSeleccionadas = "A2,A4,A3,A1";
+        String sillasSeleccionadas = "A2,A2,A3,A1";
         String tipoCrispetas = "P,G,M,M";
 
         cine.ventaSillas(sillasSeleccionadas);
@@ -36,7 +37,7 @@ public class Main {
 
         System.out.println("=========================================================");
 
-        /* System.out.println("SILLAS ADICIONALES");
+       /* System.out.println("SILLAS ADICIONALES");
          cine.ventaSillas("A1,A2,A3,A4,A5,A6,A7");
         System.out.println(cine.verAsientos());
          //cine.ventaSillas("D1,D2,D3,D4,D5,D6,D7");

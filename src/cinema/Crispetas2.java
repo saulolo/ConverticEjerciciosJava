@@ -1,5 +1,7 @@
 package cinema;
 
+
+
 /* @author: Saulolo */
 public class Crispetas2 {
 
@@ -20,9 +22,10 @@ public class Crispetas2 {
         for (int i = 0; i < size.length; i++) {
             String each = size[i];
             precio = each.equals("G") ? 8000 : each.equals("M") ? 4000 : 2000;
-            if (each == "G") {
+            if (each.equals("G")) {
                 totalCrispetas += precio;
-            } else if (each == "M") {
+                
+            } else if (each.equals("M")) {
                 totalCrispetas += precio;
             } else {
                 totalCrispetas += precio;

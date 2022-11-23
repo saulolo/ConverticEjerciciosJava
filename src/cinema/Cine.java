@@ -47,22 +47,32 @@ public class Cine {
         return info;
     }
 
-    public boolean ventaSillas(String seleccionados) {
+    public boolean ventaSillas(String seleccionados)   {
+        
+    
         // A1,A2, ...
         String comprados = "";
         String[] sillas = seleccionados.split(",");
         for (int i = 0; i < sillas.length; i++) {
+            try {
+                
+           
             if (reservarSilla(sillas[i])) {
                 comprados += sillas[i];
             } else {
                 liberar(comprados);
-                return false;
+                 
+                    return false;
+                }
+            } catch (SillaNoDisponible e) {
             }
         }
         return true;
     }
-
-    public boolean reservarSilla(String espacio) {
+    
+    public boolean reservarSilla(String espacio)  throws SillaNoDisponible {
+            
+            
         for (int f = 0; f < asientos.length; f++) {
             for (int c = 0; c < asientos[f].length; c++) {
                 if (asientos[f][c].getNombre().equals(espacio)) {
@@ -70,7 +80,8 @@ public class Cine {
                         asientos[f][c].setDisponible(false);
                         return true;
                     } else {
-                        return false;
+                        throw new SillaNoDisponible();
+                        //return false;
                     }
                 }
             }
